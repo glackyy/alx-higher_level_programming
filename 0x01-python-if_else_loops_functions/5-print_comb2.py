@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+Op = ""
 for i in range(100):
-    print("{:02d}".format(i), end='')
+    Op += "{:02d}".format(i)
     if i != 99:
-        print(", ", end='')
-    else:
-        print() 
+        Op += ", "
+print(Op)

@@ -8,7 +8,6 @@ if __name__== "__main__":
     a = int(sys.argv[1])
     op = sys.argv[2]
     b = int(sys.argv[3])
-    res = None
     if op == '+':
         res = add(a, b)
     elif op == '-':
@@ -20,4 +19,4 @@ if __name__== "__main__":
     else:
         print("Unknown operator, Available operators: +, -, * and /")
         sys.exit(1)
-    print("{a} {operator} {b} = {res}".format(a=a, op=operator, b=b, res=res))
+    print("{} {} {} = {}".format(a, op, b, res))

@@ -10,7 +10,7 @@ printf("[*] Allocated = %zd\n", alloc);
 for (i = 0 ; i < size ; i++)
 {
 PyObject *item = PyList_GetItem(p, i);
-*type = Py_TYPE(item)->tp_name;
+type = Py_TYPE(item)->tp_name;
 printf("Element %zd: %s\n", i, type);
 }
 }

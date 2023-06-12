@@ -2,5 +2,8 @@
 def divisible_by_2(my_list=[]):
     res = []
     for n in my_list:
-        res.append(num % 2 == 0)
+        if num % 2 == 0:
+            res.append(True)
+        else:
+            res.append(False)
     return res

@@ -8,8 +8,9 @@ class Square:
         """init instance of the class
 
         Args:
-            size (int)
+            size (int): The size of the new square
         """
+
         if isinstance(size, int):
             if size < 0:
                 raise ValueError("size must be >= 0")

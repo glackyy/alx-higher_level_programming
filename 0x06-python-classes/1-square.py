@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define Square"""
 
+
 class Square:
     """class represents Square"""
 
@@ -9,4 +10,5 @@ class Square:
         
         Args:
             Size (int): The size of the square"""
+
         self.__size = size

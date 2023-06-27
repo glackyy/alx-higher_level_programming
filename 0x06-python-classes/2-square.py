@@ -1,19 +1,17 @@
 #!/usr/bin/python3
+
 """define a Square"""
 
 
 class Square:
     """represents a Square"""
 
-
     def __init__(self, size=0):
         """init instance of the class
-
 
         Args:
             size (int): The size of the new square
         """
-
 
         if isinstance(size, int):
             if size < 0:

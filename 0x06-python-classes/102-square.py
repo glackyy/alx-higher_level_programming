@@ -36,15 +36,15 @@ class Square:
         """Returns the area of the square."""
         return self.size ** 2
 
-    def __equals__(self, other):
+    def __eq__(self, other):
         """Check if two squares have equal areas.
 
         Args:
             other (Square): The other square to compare.
         """
-        return self.area() == other.area()
+        return self.area() ==  other.area()
 
-    def __notequal__(self, other):
+    def __ne__(self, other):
         """Check if two squares have unequal areas.
 
         Args:
@@ -52,7 +52,7 @@ class Square:
         """
         return self.area() != other.area()
 
-    def __greaterthan__(self, other):
+    def __gt__(self, other):
         """Check if the area of the current square is greater than the area of another square.
 
         Args:
@@ -60,7 +60,7 @@ class Square:
         """
         return self.area() > other.area()
 
-    def __GorE__(self, other):
+    def __ge__(self, other):
         """Check if the area of the current square is greater than or equal to the area of another square.
 
         Args:
@@ -68,7 +68,7 @@ class Square:
         """
         return self.area() >= other.area()
 
-    def __lessthan__(self, other):
+    def __lt__(self, other):
         """Check if the area of the current square is less than the area of another square.
 
         Args:
@@ -76,7 +76,7 @@ class Square:
         """
         return self.area() < other.area()
 
-    def __LorE__(self, other):
+    def __le__(self, other):
         """Check if the area of the current square is less than or equal to the area of another square.
 
         Args:

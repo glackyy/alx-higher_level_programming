@@ -83,4 +83,3 @@ class Square:
             other (Square): The other square to compare.
         """
         return self.area() <= other.area()
-

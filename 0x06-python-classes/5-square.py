@@ -2,6 +2,7 @@
 
 """Define a class Square."""
 
+
 class Square:
     """Represents a square."""
 
@@ -37,4 +38,3 @@ class Square:
         else:
             for _ in range(self.size):
                 print("#" * self.size)
-

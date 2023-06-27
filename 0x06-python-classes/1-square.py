@@ -9,6 +9,7 @@ class Square:
         """Init instance of the class
         
         Args:
-            Size (int): The size of the square"""
+            Size (int): The size of the square
+        """
 
         self.__size = size

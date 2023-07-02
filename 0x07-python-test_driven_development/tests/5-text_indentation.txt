@@ -1,0 +1,61 @@
+================================
+How to Use text_indentation.py
+================================
+
+This function prints a text with two new lines after each occurrence of the characters ".", "?", and ":".
+
+Function Prototype
+==================
+
+def text_indentation(text):
+    - text: The input text (must be a string)
+
+    Raises a TypeError if the text is not a string.
+
+Usage
+=====
+
+1. Import the function:
+   - Make sure the text_indentation function is defined in your code or imported from a module.
+
+2. Call the function:
+   - Provide the text as an argument to the text_indentation function.
+
+Example Usage
+=============
+
+text_indentation("Hello?")
+text_indentation("   Hi there.")
+text_indentation("Hello.   ")
+text_indentation("    Woah now.    This is messy.   ")
+text_indentation("No ending period, what bad grammar")
+text_indentation("Let's print a new-line! Here goes:\nPrinted.")
+
+Explanation
+===========
+
+1. The function takes a text parameter and checks if it is a string. If not, a TypeError is raised with the message "text must be a string".
+
+2. The function iterates through each character in the text and builds a result string.
+
+3. If the character is one of the specified new line characters (".", "?", ":"), two new lines ("\n\n") are added to the result.
+
+4. The result string is then split into lines using the newline character ("\n").
+
+5. Leading and trailing spaces are removed from each line, and empty lines are filtered out.
+
+6. The formatted lines are joined back together with newline characters.
+
+7. The formatted text is printed to the console.
+
+Invalid Text
+============
+
+If the text parameter is not a string, a TypeError is raised with the message "text must be a string".
+
+Notes
+=====
+
+- The function does not import any external modules.
+- There should be no space at the beginning or end of each printed line.
+

@@ -1,0 +1,77 @@
+==============================
+How to Use matrix_divided.py
+==============================
+
+This module defines a function `matrix_divided(matrix, div)` that divides all elements of a matrix by a given number.
+
+Usage
+=====
+
+Function Signature:
+    matrix_divided(matrix, div)
+
+Parameters:
+    - matrix: A list of lists containing integers or floats.
+    - div: A number (integer or float) to divide the matrix elements by.
+
+Returns:
+    - A new matrix with all elements divided by `div`, rounded to 2 decimal places.
+
+Example:
+---------
+
+Consider the following matrix:
+
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ]
+
+To divide the elements of the matrix by 3, you can use the function as follows:
+
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Note that the original matrix remains unchanged:
+
+    >>> matrix
+    [[1, 2, 3], [4, 5, 6]]
+
+Error Handling
+==============
+
+The `matrix_divided()` function performs several error checks:
+
+- If the `matrix` argument is not a list of lists of integers or floats, a `TypeError` is raised with the message "matrix must be a matrix (list of lists) of integers/floats".
+
+- If the rows of the matrix are not of the same size, a `TypeError` is raised with the message "Each row of the matrix must have the same size".
+
+- If the `div` argument is not a number (integer or float), a `TypeError` is raised with the message "div must be a number".
+
+- If `div` is equal to 0, a `ZeroDivisionError` is raised with the message "division by zero".
+
+Let's consider an example:
+
+    >>> matrix_divided("invalid", 2)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[1, 2, 3], [4, 5], [6, 7, 8]], 2)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "invalid")
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: div must be a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ZeroDivisionError: division by zero
+
+In each case, the corresponding error is raised with the appropriate error message.
+
+

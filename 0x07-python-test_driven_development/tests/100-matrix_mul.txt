@@ -1,0 +1,55 @@
+============================
+How to Use 100-matrix_mul.py
+============================
+
+This module defines a matrix multiplication function `matrix_mul(m_a, m_b)`.
+
+Usage
+=====
+The `matrix_mul(...)` function returns a new matrix representing the multiplication of `m_a` by `m_b`.
+
+Example 1:
+----------
+```python
+matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+m_a = [
+    [1, 2],
+    [3, 4],
+]
+m_b = m_a
+
+print(matrix_mul(m_a, m_b))
+[[7, 10], [15, 22]]
+
+m_a = [[1, 2]]
+m_b = [
+    [3, 4],
+    [5, 6]
+]
+
+print(matrix_mul(m_a, m_b))
+[[13, 16]]
+
+The function also works with floating-point numbers. You can combine integers and floats in the matrices as well.
+
+Handling Errors
+The matrix_mul() function enforces certain requirements on the input matrices. Here are the possible errors and their respective error messages:
+
+TypeError: A minimum of two arguments (m_a and m_b) must be provided.
+ValueError: The matrices m_a and m_b cannot be empty.
+TypeError: The parameters m_a and m_b must be lists.
+TypeError: The parameters m_a and m_b must be lists of lists.
+TypeError: The matrices m_a and m_b must contain only integers or floats.
+TypeError: The rows in the matrices m_a and m_b must be of the same size.
+ValueError: The matrices m_a and m_b cannot be multiplied.
+Invalid Matrices
+If the input matrices do not meet the requirements, the matrix_mul() function will raise appropriate error messages. Here are some examples of invalid matrices:
+
+Matrices must be lists of lists, and each inner list must contain only integers or floats.
+Matrices must have rows of the same size.
+Matrices cannot be empty.
+Matrices must have compatible dimensions for multiplication.
+By ensuring that the input matrices meet the requirements and handling the possible error cases, you can effectively use the matrix_mul() function for matrix multiplication.
+
+============================

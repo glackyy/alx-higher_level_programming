@@ -1,0 +1,69 @@
+================================================
+How to Use 101-lazy_matrix_mul.py with NumPy
+===============================================
+
+This module defines a matrix multiplication function `lazy_matrix_mul(m_a, m_b)` using the NumPy module.
+
+Requirements
+============
+Before using the `lazy_matrix_mul()` function, make sure you have installed NumPy version 1.15.0. You can install it using the following command:
+pip3 install numpy==1.15.0
+
+
+Usage
+=====
+The `lazy_matrix_mul(...)` function returns a new matrix representing the multiplication of `m_a` by `m_b` using NumPy.
+
+Example 1:
+----------
+```python
+lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+m_a = [
+    [1, 2],
+    [3, 4],
+]
+m_b = [
+    [1, 2],
+    [3, 4],
+]
+
+print(lazy_matrix_mul(m_a, m_b))
+[[ 7 10]
+ [15 22]]
+
+m_a = [[1, 2]]
+m_b = [
+    [3, 4],
+    [5, 6]
+]
+
+print(lazy_matrix_mul(m_a, m_b))
+[[13 16]]
+
+The function uses NumPy arrays to perform matrix multiplication efficiently. The resulting matrix is also a NumPy array.
+
+Handling Errors
+The lazy_matrix_mul() function enforces similar requirements on the input matrices as the previous implementation. However, it raises different exception types and messages.
+
+Here are the possible errors and their respective error messages:
+
+ValueError: A minimum of two arguments (m_a and m_b) must be provided.
+ValueError: The matrices m_a and m_b cannot be empty.
+TypeError: The parameters m_a and m_b must be lists.
+TypeError: The parameters m_a and m_b must be lists of lists.
+TypeError: The matrices m_a and m_b must contain only integers or floats.
+ValueError: The matrices m_a and m_b cannot be multiplied.
+NumPy Requirement
+To use the lazy_matrix_mul() function, NumPy must be installed. If NumPy is not installed or the required version is not available, the function will raise an error.
+
+Invalid Matrices
+If the input matrices do not meet the requirements, the lazy_matrix_mul() function will raise appropriate error messages. Here are some examples of invalid matrices:
+
+Matrices must be lists of lists, and each inner list must contain only integers or floats.
+Matrices must have rows of the same size.
+Matrices cannot be empty.
+Matrices must have compatible dimensions for multiplication.
+By ensuring that the input matrices meet the requirements, installing NumPy, and handling the possible error cases, you can effectively use the lazy_matrix_mul() function for matrix multiplication with the help of NumPy.
+
+========================================================

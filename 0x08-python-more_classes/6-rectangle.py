@@ -5,7 +5,7 @@
 
 class Rectangle:
     """Represents a rectangle
- 
+
     Attributes:
         num_of_instances: (int)
     """
@@ -71,13 +71,12 @@ class Rectangle:
 
     def __str__(self):
         """Returns a string representing the rectangle"""
-         rec = []
+        rec = []
         for i in range(self.__height):
             [rec.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rec.append("\n")
         return ("".join(rec))
-
 
     def __repr__(self):
         """Returns a string representing the rectangle"""

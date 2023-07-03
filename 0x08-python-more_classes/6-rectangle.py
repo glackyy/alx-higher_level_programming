@@ -71,15 +71,19 @@ class Rectangle:
 
     def __str__(self):
         """Returns a string representing the rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        rec = "#" * self.__width + "\n"
-        rec *= self.__height
-        return rec.rstrip()
+         rec = []
+        for i in range(self.__height):
+            [rec.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rec.append("\n")
+        return ("".join(rec))
+
 
     def __repr__(self):
         """Returns a string representing the rectangle"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        rec = "Rectangle(" + str(self.__width)
+        rec += ", " + str(self.__height) + ")"
+        return rec
 
     def __del__(self):
         """Deletes rectangle"""

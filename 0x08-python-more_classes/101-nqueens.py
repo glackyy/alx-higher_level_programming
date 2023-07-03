@@ -22,6 +22,7 @@ def is_safe(board, row, col):
         j += 1
     return True
 
+
 def solve_nqueens(board, row):
     """Solve the n-queens problem using backtracking"""
     if row == N:
@@ -33,6 +34,7 @@ def solve_nqueens(board, row):
             solve_nqueens(board, row + 1)
             board[row][col] = 0
 
+
 def print_solution(board):
     """Print the board configuration as a list of positions of the queens"""
     sol = []
@@ -41,6 +43,7 @@ def print_solution(board):
             if board[i][j] == 1:
                 sol.append([i, j])
     print(sol)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

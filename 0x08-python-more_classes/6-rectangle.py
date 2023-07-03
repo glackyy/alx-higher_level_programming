@@ -19,9 +19,9 @@ class Rectangle:
             width: (int)
             height: (int)
         """
+        type(self).num_of_instances += 1
         self.width = width
         self.height = height
-        type(self).num_of_instances += 1
 
     @property
     def width(self):
@@ -78,7 +78,7 @@ class Rectangle:
             [rec.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rec.append("\n")
-        return ("".join(rec))
+        return "".join(rec)
 
     def __repr__(self):
         """Returns a string representing the rectangle"""
@@ -87,6 +87,6 @@ class Rectangle:
         return rec
 
     def __del__(self):
-        """Deletes rectangle"""
+        """Print a message for every Del of a rectangle"""
         type(self).num_of_instances -= 1
         print("Bye rectangle...")

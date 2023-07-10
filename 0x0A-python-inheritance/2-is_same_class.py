@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defining a function is_name_class"""
 
 

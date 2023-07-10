@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defining an inherited list class MyList"""
 
 

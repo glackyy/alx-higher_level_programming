@@ -11,3 +11,4 @@ def is_name_class(obj, a_class):
         a_class: the class to compare
     """
     return type(obj) is a_class
+

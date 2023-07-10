@@ -24,4 +24,3 @@ class MyInt(int):
             bool: True if the objects are equal, False otherwise
         """
         return super().__eq__(other)
-

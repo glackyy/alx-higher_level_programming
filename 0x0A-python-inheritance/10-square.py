@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Defining a class Square"""
-
+"""Defining a Rectangle subclass Square"""
+Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """A class representing a Square.Inherits from Rectangle"""

@@ -4,10 +4,7 @@
 
 
 class Mylist(list):
-    """Custom list class that inherits from list
-
-    Methods: print_sorted()
-    """
+    """Custom list class that inherits from list."""
 
     def print_sorted(self):
         """Prints the list in sorted"""

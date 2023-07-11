@@ -23,17 +23,10 @@ class Student:
         Args:
             attrs (list): (Optional) The attributes to represent.
         """
-        if attrs is None:
-            attrs = self.__dict__.keys()
-        else:
-            attrs = set(attrs)
-
-        json_dic = {}
-        for attrib in attrs:
-            if attrib in self.__dict__:
-                json_dic[attrib] = self.__dict__[attrib]
-
-        return json_dic
+        if (type(attrs) == list and
+                all(type(e) == str for e in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        return self.__dict__
 
     def reload_from_json(self, json):
         """Replaces all attributes of the student based on a dict

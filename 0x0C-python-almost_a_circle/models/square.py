@@ -37,18 +37,40 @@ class Square(Rectangle):
 
         Args:
             *args: Variable number of arguments in the following order:
-                - first argument: id attribute
-                - second argument: size attribute
-                - third argument: x attribute
-                - fourth argument: y attribute
+                first argument: id attribute
+                second argument: size attribute
+                third argument: x attribute
+                fourth argument: y attribute
         """
         if args and len(args) != 0:
-            attrs = ['id', 'size', 'x', 'y']
-            for i in range(len(args)):
-                setattr(self, attrs[i], args[i])
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
+
         elif kwargs and len(kwargs) != 0:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "size":
+                    self.size = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
 
     def to_dictionary(self):
         """Returns the dictionary representation of the Square"""

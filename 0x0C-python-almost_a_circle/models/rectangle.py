@@ -96,7 +96,7 @@ class Rectangle(Base):
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the attrib of the rectangle
 
         Args:

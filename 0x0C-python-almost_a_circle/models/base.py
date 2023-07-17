@@ -4,6 +4,7 @@
 import json
 import csv
 
+
 class Base:
     """managing id attribute in future classes
 
@@ -110,7 +111,7 @@ class Base:
                     fieldnames = ["id", "size", "x", "y"]
                 l_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
                 l_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
+                           for d in list_dicts]
                 return [cls.create(**d) for d in l_dicts]
         except IOError:
             return []

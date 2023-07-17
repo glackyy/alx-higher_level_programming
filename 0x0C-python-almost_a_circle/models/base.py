@@ -2,7 +2,7 @@
 
 """Defining Base class"""
 import json
-
+import csv
 
 class Base:
     """managing id attribute in future classes

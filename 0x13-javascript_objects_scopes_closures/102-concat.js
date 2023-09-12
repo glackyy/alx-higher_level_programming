@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const fsource = require('fsource');
+const fs = require('fs');
 
-const farg = fsource.readFileSync(process.argv[2]).toString();
-const sarg = fsource.readFileSync(process.argv[3]).toString();
-fsource.writeFileSync(process.argv[4], farg + sarg);
+const farg = fs.readFileSync(process.argv[2]).toString();
+const sarg = fs.readFileSync(process.argv[3]).toString();
+fs.writeFileSync(process.argv[4], farg + sarg);

@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     curr = db.cursor()
     curr.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
-                 .format(sys.arg[4]))
+                 .format(sys.argv[4]))
     rows = curr.fetchall()
     for row in rows:
         print(row)

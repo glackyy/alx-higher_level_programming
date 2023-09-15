@@ -10,7 +10,7 @@ if __name__ == "__main__":
     curr = db.cursor()
     curr.execute("""SELECT cities.name FROM
                  cities INNER JOIN states ON states.id=cities.state_id
-                 WHERE state.name=%s""", (sys.argv[4],))
+                 WHERE states.name=%s""", (sys.argv[4],))
     rows = curr.fetchall()
     temp = list(row[0] for row in rows)
     print(*temp, sep=", ")

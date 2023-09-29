@@ -1,1 +1,11 @@
-#\!/usr/bin/python3
+#!/usr/bin/python3
+"""Displaying the X-Request-Id header var of a request to a given URL
+"""
+import sys
+import requests
+
+
+if __name__ == "__main__":
+    url = sys.arg[1]
+    res = requests.get(url)
+    print(res.headers.get("X-Request-Id"))

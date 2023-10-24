@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const req = require('require');
+const req = require('request');
 const url = process.argv[2];
 req(url, function (error, response, body) {
   if (error) {
